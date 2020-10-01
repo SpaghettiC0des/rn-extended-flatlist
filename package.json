@@ -1,0 +1,60 @@
+{
+  "name": "rn-extended-flatlist",
+  "version": "0.1.0",
+  "private": false,
+  "author": {
+    "name": "Karl Marx Lopez",
+    "email": "karlmarx.webdev@gmail.com",
+    "url": "https://github.com/karlmarxlopez"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
+  },
+  "peerDependencies": {
+    "react": ">=16.8",
+    "react-native": "<=0.63.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^9.1.1",
+    "@commitlint/config-conventional": "^9.1.1",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "@types/jest": "^26.0.4",
+    "@types/react": ">=16.8",
+    "@types/react-native": "<=0.63.2",
+    "@typescript-eslint/eslint-plugin": "^4.1.0",
+    "@typescript-eslint/parser": "^4.1.0",
+    "eslint": "^7.8.1",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.0",
+    "husky": "^4.2.5",
+    "jest": "^26.1.0",
+    "lint-staged": ">=10",
+    "react": ">=16.8",
+    "react-native": "<=0.63.2",
+    "react-native-testing-library": "^6.0.0",
+    "ts-jest": "^26.1.2",
+    "typescript": "3.9.6"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": "eslint --cache --fix"
+  },
+  "license": "MIT"
+}
