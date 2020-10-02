@@ -42,4 +42,29 @@ describe('<EmptyListMessage />', () => {
       expect(getByA11yLabel(String(item))).not.toBeNull();
     });
   });
+
+  it('should render items correctly when listItemHeight is provided', () => {
+    const {rerender, getByA11yLabel} = rendered;
+    const fakeItems = [1, 2, 3];
+
+    rerender(
+      <ExtendedFlatList
+        listItemHeight={100}
+        data={fakeItems}
+        keyExtractor={(item) => String(item)}
+        renderItem={({item}) => (
+          <Text
+            accessible
+            accessibilityLabel={String(item)}
+            style={{height: 100}}>
+            {item}
+          </Text>
+        )}
+      />,
+    );
+
+    fakeItems.forEach((item) => {
+      expect(getByA11yLabel(String(item))).not.toBeNull();
+    });
+  });
 });
