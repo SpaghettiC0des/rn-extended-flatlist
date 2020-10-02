@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EmptyListMessage /> should accept custom container style 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      },
+      Object {
+        "backgroundColor": "red",
+      },
+    ]
+  }
+>
+  <Text
+    accessibilityLabel="Empty List"
+    accessible={true}
+    style={
+      Array [
+        Object {
+          "fontSize": 16,
+        },
+        undefined,
+      ]
+    }
+  >
+    Empty List
+  </Text>
+</View>
+`;
+
+exports[`<EmptyListMessage /> should accept custom text style 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    accessibilityLabel="Empty List"
+    accessible={true}
+    style={
+      Array [
+        Object {
+          "fontSize": 16,
+        },
+        Object {
+          "color": "yellow",
+        },
+      ]
+    }
+  >
+    Empty List
+  </Text>
+</View>
+`;
