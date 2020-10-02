@@ -7,6 +7,9 @@
     "email": "karlmarx.webdev@gmail.com",
     "url": "https://github.com/karlmarxlopez"
   },
+  "repository": {
+    "url": "https://github.com/karlmarxlopez/rn-extended-flatlist"
+  },
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
