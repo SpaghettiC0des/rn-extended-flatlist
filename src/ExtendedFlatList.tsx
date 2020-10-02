@@ -3,6 +3,7 @@ import {FlatList as RNFlatList, StyleSheet} from 'react-native';
 import {EmptyListMessage} from './EmptyListMessage';
 import {ExtendedFlatListProps} from './types';
 import {ItemSeparator} from './ItemSeparator';
+import {getItemLayout as defaultGetItemLayout} from './getItemLayout';
 
 export class ExtendedFlatList<ItemT> extends PureComponent<
   ExtendedFlatListProps<ItemT>
@@ -15,6 +16,8 @@ export class ExtendedFlatList<ItemT> extends PureComponent<
       noItemSeparator,
       noEmptyListMessage,
       emptyListMessage,
+      listItemHeight,
+      getItemLayout,
       ...props
     } = this.props;
 
@@ -35,6 +38,11 @@ export class ExtendedFlatList<ItemT> extends PureComponent<
         contentContainerStyle={[styles.contentContainer, contentContainerStyle]}
         ItemSeparatorComponent={noItemSeparator ? null : itemSeparatorComponent}
         ListEmptyComponent={noEmptyListMessage ? null : listEmptyComponent}
+        getItemLayout={
+          listItemHeight && !getItemLayout
+            ? defaultGetItemLayout(listItemHeight)
+            : getItemLayout
+        }
       />
     );
   }
