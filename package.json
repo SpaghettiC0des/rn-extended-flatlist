@@ -1,6 +1,6 @@
 {
   "name": "rn-extended-flatlist",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "author": {
     "name": "Karl Marx Lopez",
@@ -10,6 +10,13 @@
   "repository": {
     "url": "https://github.com/karlmarxlopez/rn-extended-flatlist"
   },
+  "keywords": [
+    "react",
+    "react native",
+    "flat list",
+    "list",
+    "flatlist"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
