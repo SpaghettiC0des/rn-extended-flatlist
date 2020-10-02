@@ -7,6 +7,9 @@
     "email": "karlmarx.webdev@gmail.com",
     "url": "https://github.com/karlmarxlopez"
   },
+  "repository": {
+    "url": "https://github.com/karlmarxlopez/rn-extended-flatlist"
+  },
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -30,6 +33,7 @@
     "@types/jest": "^26.0.4",
     "@types/react": ">=16.8",
     "@types/react-native": "<=0.63.2",
+    "@types/react-test-renderer": "^16.9.3",
     "@typescript-eslint/eslint-plugin": "^4.1.0",
     "@typescript-eslint/parser": "^4.1.0",
     "eslint": "^7.8.1",
